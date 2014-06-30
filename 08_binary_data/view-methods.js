@@ -15,7 +15,7 @@ var view = new Int32Array(4);
 
 view.set([1, 2, 3, 4], 0);
 
-// comlicated copy example
+// comlicated copy example - values are not overwritten
 var buf = new ArrayBuffer(4);
 var view1 = new Int8Array(buf);
 var view2 = new Int8Array(buf, 0, 2);
