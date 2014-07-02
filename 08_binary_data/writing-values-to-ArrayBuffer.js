@@ -8,6 +8,8 @@ foo[3] = 3;
 foo[4] = 4;
 console.log(foo);
 
+// print the Array Buffer
+
 for (var i = 0, len = foo.byteLength; i < len; i++) {
 	console.log(foo[i]);
 }
