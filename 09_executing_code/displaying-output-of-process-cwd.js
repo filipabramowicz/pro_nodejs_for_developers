@@ -1,5 +1,6 @@
 var cp = require("child_process");
 
+// exec() spawns new sheel
 cp.exec("ls -l", { 
     cwd: "/"
 }, function(error, stdout, stderr){
