@@ -1,6 +1,6 @@
 var net = require('net');
 var server = net.createServer(function(socket){
-	// handle connection
+	socket.end("Hello and Goodbye!\n");
 });
 
-server.listen("/tmp/foo.sock");
+server.listen("/tmp/foo1.sock");
