@@ -1,13 +1,15 @@
-
-/**
- * Module dependencies.
- */
-
-var express = require('express')
-  , routes = require('./routes'),
+var express = require('express'),
+    routes = require('./routes'),
+    path = require('path'),
     validator = require("express-validator");
 
 var app = module.exports = express.createServer();
+
+// define the storage area
+app.use(function(req, res, next){
+   req.store = __dirname + "/store";
+   next();
+});
 
 // Configuration
 
@@ -65,5 +67,5 @@ app.get("/products/:productId", function(req, res, next) {
 });
 
 
-app.listen(3000);
+app.listen(8000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
