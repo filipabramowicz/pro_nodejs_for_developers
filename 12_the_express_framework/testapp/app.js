@@ -53,7 +53,7 @@ app.get("/products/:productId", function(req, res, next) {
     req.assert("productId", "Invalid product ID").isAlpha().len(2, 10);
     errors = req.validationErrors();
     
-    // There is also sanitize() method:
+    // There is also sanitize() method, which is used to clean up input
     // req.sanitize("parameter").toBoolean() - changes to boolean
     // req.sanitize("parameter").toInt() - changes to integer
     // req.sanitize("parameter").trim() - trims spaces before and after parameter
