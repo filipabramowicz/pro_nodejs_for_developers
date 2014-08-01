@@ -17,6 +17,7 @@
 
 
 // Checking the state of connection
+// It's better to use constants than numbers
 switch(socket.readyState) {
 	case WebSocket.CONNECTING:
 		// in connectiong state
