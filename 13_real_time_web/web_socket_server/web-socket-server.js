@@ -1,12 +1,12 @@
 var http = require("http");
 var connect = require("connect");
-var serveStatic = require('serve-static');
+var serverStatic = require('serve-static');
 var app = connect("connect");
 var WebSocketServer = require("ws").Server;
 var server;
 var wsServer;
 
-app.use(serveStatic("public"));
+app.use(serverStatic("public"));
 server = http.createServer(app);
 wsServer = new WebSocketServer({
 	server: server
