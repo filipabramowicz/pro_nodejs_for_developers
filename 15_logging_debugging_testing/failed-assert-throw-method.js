@@ -13,3 +13,6 @@ assert.throws(divide.bind(null, 3, 0), /foo/);
 assert.throws(divide.bind(null, 4, 0), function(error){
 	return false;
 });
+
+// There is also opposite method
+// doesNotThrow()
